@@ -1,0 +1,72 @@
+@keyframes drill {
+    0% {
+      transform: translateY("60px");
+    }
+    50% {
+      transform: translateY("0");
+    }
+    100% {
+      transform: translateY("-60px");
+    }
+  }
+  .s_card {
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    transition: all 0.2s;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    background-color: #ff0e2cdd;
+    color: white;
+  }
+  .s_card:first-child,
+  .s_card:nth-child(4n) {
+    background-color: #ff0e2c22;
+    color: #262e45cc;
+  }
+  .s_card:first-child:hover,
+  .s_card:nth-child(4n):hover {
+    background-color: #ff0e2cdd;
+    color: white;
+  }
+  
+  .s_card button {
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    animation: drill 2s ease-in-out;
+  }
+  
+  .s_card:hover {
+    transform: translateY(-20px) scaleY(1.1);
+    backdrop-filter: blur(5px);
+    background-color: #ff0e2c22;
+    color: #262e45cc;
+    border-radius: 10px;
+  }
+  
+  .s_card:hover button {
+    visibility: visible;
+    transform: translateY(0%);
+    
+  }
+  
+  @media screen and (max-width: 640px) {
+    .s_card:nth-child(n) {
+      background-color: #ff0e2cdd;
+      color: white;
+    }
+    .s_card:nth-child(n):hover {
+      background-color: #ff0e2c22;
+      color: #262e45cc;
+    }
+    .s_card:nth-child(2n) {
+      background-color: #ff0e2c22;
+      color: #262e45cc;
+    }
+    .s_card:nth-child(2n):hover {
+      background-color: #ff0e2cdd;
+      color: white;
+    }
+  }
