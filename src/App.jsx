@@ -5,7 +5,11 @@ import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
 import WhiteLabel from './components/WhiteLabel';
 import Services from './components/Services';
-import Hero from './components/Hero';
+
+import ProductsPage from './components/ProductsPage';
+import ResetPasswordPage from './components/ResetPasswordPage';
+import ProfilePage from './components/ProfilePage';
+import PaymentPage from './components/PaymentPage';
 
 function App() {
   return (
@@ -13,7 +17,7 @@ function App() {
       <Header />
       <Navbar />  
       <main className="flex-grow">
-        <Hero/>
+       <PaymentPage/>
       </main>
       <Footer />
     </div>

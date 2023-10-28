@@ -31,23 +31,23 @@ const Footer = () => {
           <p className="text-justify">
             Hipowerbatteries is the leading manufacturer of Automotive and Inverter Batteries. After starting its operation since 1988, the firm has achieved many accomplishments and has established a widespread dealer network. The firm is supplying high-quality batteries to Government Departments like: Defence, Railways, MPSEB, State Transports
           </p>
-          <div className="flex gap-5">
-            <button>
+          <div className="flex gap-5 ">
+            <button className='bg-transparent hover:border-none'>
               <AiFillFacebook
                 size={40}
                 className="text-[#ff0e2c] bg-white hover:bg-[#ff0e2c] hover:text-white rounded-full px-2 "
               />
             </button>
-            <button>
+            <button className='bg-transparent hover:border-none'>
               <AiFillInstagram
                 size={40}
-                className="text-[#ff0e2c] bg-white hover.bg-[#ff0e2c] hover.text-white rounded-full px-2"
+                className="text-[#ff0e2c] bg-white hover:bg-[#ff0e2c] hover:text-white rounded-full px-2"
               />
             </button>
-            <button>
+            <button className='bg-transparent hover:border-none'>
               <AiOutlineTwitter
                 size={40}
-                className="text-[#ff0e2c] bg-white hover.bg-[#ff0e2c] hover.text-white rounded-full px-2"
+                className="text-[#ff0e2c] bg-white hover:bg-[#ff0e2c] hover:text-white rounded-full px-2"
               />
             </button>
           </div>

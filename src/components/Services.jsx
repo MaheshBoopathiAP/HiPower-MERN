@@ -2,8 +2,8 @@ import React from 'react';
 import { MdOutlineMiscellaneousServices, MdOutlinePrecisionManufacturing } from "react-icons/md"
 import { SiWhitesource } from "react-icons/si"
 import { TbReplace } from "react-icons/tb"
-import { GrHostMaintenance } from "react-icons/gr";
-import { BsCodeSlash } from "react-icons/bs";
+// import { GrHostMaintenance } from "react-icons/gr";
+// import { BsCodeSlash } from "react-icons/bs";
 import "../../public/assets/css/ServiceCard.css";
 
 const Services = () => {
