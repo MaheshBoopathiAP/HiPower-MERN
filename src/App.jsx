@@ -10,6 +10,9 @@ import ProductsPage from './components/ProductsPage';
 import ResetPasswordPage from './components/ResetPasswordPage';
 import ProfilePage from './components/ProfilePage';
 import PaymentPage from './components/PaymentPage';
+import ProductInfo from './components/ProductInfo';
+import CartPage from './components/CartPage';
+import CheckoutPage from './components/CheckoutPage';
 
 function App() {
   return (
