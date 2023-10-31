@@ -1,6 +1,7 @@
 import  { useEffect, useState } from 'react';
 // import CloseIcon from '@mui/icons-material/Close';
 import BadgeIcon from '@mui/icons-material/Badge';
+import Navbar from './Navbar';
 
 const ProfilePage = () => {
   // Define a state to store user details
@@ -32,6 +33,8 @@ const ProfilePage = () => {
   }, []);
 
   return (
+    <>
+    <Navbar/>
     <div className="ecomm-popup bg-white top-0 z-20 w-full h-screen flex justify-center items-center text-black">
       <div className="w-[400px] bg-white duration-300 ease-in relative flex flex-col p-5 rounded-lg shadow-lg">
         {/* <CloseIcon className="absolute top-5 right-5 cursor-pointer" /> */}
@@ -66,6 +69,7 @@ const ProfilePage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

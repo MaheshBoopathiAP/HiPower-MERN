@@ -1,4 +1,5 @@
 import  { useState } from 'react';
+import Navbar from './Navbar';
 
 // Import your payment-related image
 // import paymentImage from './payment.png';
@@ -24,6 +25,8 @@ const PaymentPage = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="w-full h-full relative inset-0 flex items-center justify-center bg-white">
       <div className="w-[800px] bg-white p-6 rounded-lg shadow-md grid grid-cols-2 gap-8 my-[5%]">
     
@@ -91,6 +94,7 @@ const PaymentPage = () => {
         
       </div>
     </div>
+    </>
   );
 };
 

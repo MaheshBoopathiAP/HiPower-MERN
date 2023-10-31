@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { toast } from 'react-hot-toast';
-import LoginForm from '../components/LoginForm';
-import SignupForm from '../components/SignupForm';
+import { Link } from 'react-router-dom';
+
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import CloseIcon from '@mui/icons-material/Close';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
@@ -13,6 +13,8 @@ import { BsCart2 } from 'react-icons/bs';
 import { CiUser } from 'react-icons/ci';
 
 // Define your LoginForm and SignupForm components
+
+
 
 const Navbar = () => {
   const [mobilemenu, setMobileMenu] = useState(false);
@@ -31,10 +33,15 @@ const Navbar = () => {
     setMobileMenu(!mobilemenu);
   };
 
+  
+
   const openForm = () => {
     setPopup(true);
     setShowForm(true);
   };
+
+
+
 
   const signOut = () => {
     // Replace with your signout logic
@@ -55,35 +62,35 @@ const Navbar = () => {
               </div>
             </h1>
           </div>
-          <div className='ecomm-menu hidden sm:flex'>
+          <div className='ecomm-menu hidden sm:flex '>
             <ul className='flex gap-5 sm:gap-7 md:gap-9 font-Poppins'>
-              <li className='nav-text font-medium hover:text-[#ff0e2c]'><a className='text-black hover:text-[#ff0e2c]' href='/'>Home</a></li>
-              <li className='nav-text text-black font-medium '><a className='text-black hover:text-[#ff0e2c]' href='/products'>Products</a></li>
-              <li className='nav-text text-black font-medium hover:text-[#ff0e2c] ' >Services</li>
-              <li className='nav-text text-black font-medium '><a className='text-black hover:text-[#ff0e2c]' href='/about'>About</a></li>
-              <li className='nav-text text-black font-medium '><a className='text-black hover:text-[#ff0e2c]' href='/contact'>Contact</a></li>
+              <li className='nav-text font-medium hover:text-[#ff0e2c]'><Link className='text-black hover:text-[#ff0e2c]' to="/Home" >Home</Link></li>
+              <li className='nav-text text-black font-medium '> <Link className='text-black hover:text-[#ff0e2c]' to="/products">Products</Link></li>
+              <li className='nav-text text-black font-medium' ><Link className='text-black hover:text-[#ff0e2c]' to="/services">Services</Link></li>
+              <li className='nav-text text-black font-medium '><Link className='text-black hover:text-[#ff0e2c]' to="/about">About</Link></li>
+              <li className='nav-text text-black font-medium '><Link className='text-black hover:text-[#ff0e2c]' to="/contact">Contact</Link></li>
             </ul>
             
           </div>
           <div className='ecomm-icons text-black'>
             <ul className='flex gap-1 sm:gap-3 md:gap-5 font-Poppins'>
               {!session ? (
-                <a href='/register'>
+                <Link to="/register">
                   <li className=' text-black hover:text-[#ff0e2c] flex items-center cursor-pointer' onClick={openForm}>
                     <CiUser size={22} />
                     <p className='text-sm hidden sm:flex text-black'>Sign In</p>
                   </li>
-                </a>
+                </Link>
               ) : (
                 <>
-                  <a href={`/profile/1`}>
+                 <Link to="/profile">
                     <li className='text-black hover:text-[#ff0e2c] flex items-center cursor-pointer'>
                     
                       <CiUser size={22}  />
                     
                       <p className='text-sm hidden sm:flex text-black'>Profile</p>
                     </li>
-                  </a>
+                    </Link>
                   <li className='text-black hover:text-[#ff0e2c] flex items-center cursor-pointer gap-1' onClick={signOut}>
                     <CiUser size={22} />
                     <p className='text-sm hidden sm:flex'>Sign Out</p>
@@ -123,7 +130,7 @@ const Navbar = () => {
               <span className='text-[#ff0e2c]'>HI</span>-POWER
               <div className='absolute top-[-8%] left-[41%]'>
                 <ElectricBoltIcon sx={{ fontSize: 20, color: '#FEFB14' }} />
-              </div>
+              </div>  
             </h1>
           </div>
           <div className='pl-[3%] pr-[10%] pb-[5%] mb-5 w-full text-gray-700 border-b'>
@@ -132,7 +139,7 @@ const Navbar = () => {
           <ul className='flex flex-col gap-6'>
             <li className='pl-[3%] hover:text-[#ff0e2c] cursor-pointer' onClick={handleMenu}>
               <HomeIcon />
-              <a href='/'>Home</a>
+              <Link to="">Home</Link>
             </li>
             <li className='pl-[3%] hover:text-[#ff0e2c] cursor-pointer' onClick={handleMenu}>
               <CategoryIcon />

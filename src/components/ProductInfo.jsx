@@ -8,6 +8,7 @@ import Select from '@mui/material/Select';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ProductImg from '../../public/assets/images/products/IMG_20230829_170129-PhotoRoom.png-PhotoRoom.png'
+import Navbar from './Navbar';
 
 const ProductInfo = () => {
   const [pricetype, setPricetype] = useState('new');
@@ -31,6 +32,8 @@ const ProductInfo = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="w-full h-full">
       {dummyProductData.map((item) => (
         <div key={item.id}>
@@ -132,6 +135,7 @@ const ProductInfo = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

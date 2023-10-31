@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineCheckSquare, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import Navbar from "./Navbar";
 
 const WhiteLabel = () => {
   // Dummy data
@@ -8,6 +9,7 @@ const WhiteLabel = () => {
 
   return (
     <>
+    {/* <Navbar/> */}
       {!homepage && (
         <section
           className="bg-[url(../../public/assets/images/White-Label-Batteries.jpg)] bg-center bg-cover h-96 relative"

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Navbar from './Navbar';
 
 const ResetPasswordPage = () => {
   const [email, setEmail] = useState('');
@@ -32,6 +33,8 @@ const ResetPasswordPage = () => {
   };
 
   return (
+    <>
+    <Navbar/>
       <div className="bg-white h-screen flex items-center justify-center">
       <div className="bg-white top-[20%] p-8 rounded shadow-md w-96">
         <h1 className="text-2xl font-bold text-red-500 mb-4 flex align-middle justify-center">Reset Password</h1>
@@ -84,6 +87,7 @@ const ResetPasswordPage = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

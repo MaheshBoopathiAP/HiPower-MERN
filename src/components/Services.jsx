@@ -5,6 +5,7 @@ import { TbReplace } from "react-icons/tb"
 // import { GrHostMaintenance } from "react-icons/gr";
 // import { BsCodeSlash } from "react-icons/bs";
 import "../../public/assets/css/ServiceCard.css";
+import Navbar from './Navbar';
 
 const Services = () => {
 
@@ -36,6 +37,8 @@ const Services = () => {
   ];
 
   return (
+    <>
+    <Navbar/>
     <div className='ecomm-services w-full py-16 px-[10px] sm:px-[6%] md:px-[9%] lg:px-[5rem] bg-white'>
       <div className='w-full'>
         <div className='text-center'>
@@ -56,6 +59,7 @@ const Services = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

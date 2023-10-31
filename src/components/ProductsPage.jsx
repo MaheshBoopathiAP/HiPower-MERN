@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import p1 from '../../public/assets/images/products/IMG_20230829_170129-PhotoRoom.png-PhotoRoom.png'
+import Navbar from './Navbar';
 
 const ProductsPage = () => {
   const [price, setPrice] = useState(2000);
@@ -173,6 +174,8 @@ const ProductsPage = () => {
   
 
   return (
+    <>
+    <Navbar/>
     <div className='w-full h-full bg-white'>
       <div className='xl:fixed xl:flex hidden xl:w-[350px] xl:h-[500px] xl:z-10'>
         <div className='filters w-full h-full px-[20%] flex flex-col gap-2'>
@@ -303,6 +306,7 @@ const ProductsPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

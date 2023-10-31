@@ -4,6 +4,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import cartImg from '../../public/assets/images/products/IMG_20230829_170129-PhotoRoom.png-PhotoRoom.png';
 import { Maximize } from '@mui/icons-material';
+import Navbar from './Navbar';
 
 const CartPage = () => {
   // Dummy data to replace Redux data
@@ -45,6 +46,8 @@ const CartPage = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="px-[4%] md:px-[5%] lg:px-[6%] bg-white text-black">
       {cartList.length ? (
         <div className="w-full flex flex-col md:flex-row justify-around py-[50px]">
@@ -199,6 +202,7 @@ const CartPage = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

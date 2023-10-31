@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import BadgeIcon from '@mui/icons-material/Badge';
+import Navbar from './Navbar';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -39,6 +40,8 @@ const SignupForm = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="ecomm-popup h-full bg-white top-0 z-20 w-full flex justify-center items-center">
       <div className="w-[400px] h-[100vh] mb-[10%] bg-white duration-300 ease-in relative flex flex-col p-5">
         <CloseIcon className="absolute top-5 right-5 cursor-pointer" />
@@ -169,6 +172,7 @@ const SignupForm = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

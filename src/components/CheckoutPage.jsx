@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import Navbar from './Navbar';
 
 const CheckoutPage = () => {
   const [pay, setPay] = useState('');
@@ -34,6 +35,7 @@ const CheckoutPage = () => {
 
   return (
     <>
+    <Navbar/>
       <div className="relative flex max-sm:flex-col px-5 sm:px-10 md:px-20 max-sm:gap-10 py-10 bg-white text-black">
         <div className="w-[70%] max-sm:w-full  flex flex-col gap-4 text-sm px-4 text-black bg-white">
           <div className="flex gap-8">

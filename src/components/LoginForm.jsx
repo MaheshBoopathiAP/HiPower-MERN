@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import OtpInput from 'otp-input-react';
 import 'react-phone-input-2/lib/style.css';
+import Navbar from './Navbar';
 
 const LoginForm = ({ handleLogin, handleOtpVerification }) => {
   const [number, setNumber] = useState('');
@@ -9,6 +10,8 @@ const LoginForm = ({ handleLogin, handleOtpVerification }) => {
   const [otp, setOtp] = useState('');
 
   return (
+    <>
+    <Navbar/>
     <div className='ecomm-popup bg-white pt-20 h-[80%] z-20 w-full flex justify-center items-center'>
       {!showOtp ? (
         <div className='w-[400px] h-[450px] bg-white duration-300 ease-in relative flex flex-col p-5'>
@@ -91,6 +94,7 @@ const LoginForm = ({ handleLogin, handleOtpVerification }) => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
