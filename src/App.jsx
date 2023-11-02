@@ -26,6 +26,7 @@ import Trial from './components/Trial'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './components/About';
 import Contact from './components/Contact';
+import OTPPage from './components/OtpPage';
 
 
 function App() {
@@ -40,7 +41,10 @@ function App() {
     <Route exact path="/products" element={<ProductsPage/>}/>
     <Route exact path="/register" element={<SignupForm/>}/>
     <Route exact path="/cart" element={<CartPage/>}/>
+    <Route exact path="/otp" element={<OTPPage/>}/>
+    <Route exact path="/login" element={<LoginForm/>}/>
     <Route exact path="/services" element={<Services/>}/>
+    <Route exact path="/checkout" element={<CheckoutPage/>}/>
     <Route exact path="/contact" element={<Contact/>}/>
     <Route exact path="/services" element={<Services/>}/>
     <Route exact path="/about" element={<About/>}/>
